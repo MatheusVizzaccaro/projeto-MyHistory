@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7%;
+    background-color: beige;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;   
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+li{
+    list-style-type:none;
+}
+
+.footer {
+    margin-top: 2.2%;
+    background-color: beige;
+    height: 7vh;
+    width: 100%;
+}
