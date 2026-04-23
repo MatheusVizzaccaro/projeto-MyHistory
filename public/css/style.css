@@ -37,33 +37,12 @@ body, p, li, a {
     padding-right: 10px;
 }
 
-li{
-    list-style-type:none;
+.div-navbar li{
+    list-style-type: none;
 }
 
 .content {
     margin-top: 0.7%;
-}
-
-.initial-text h1, p{
-    margin-top: 0.7%;
-    margin-bottom: 0.7%;
-}
-
-.initial-content {
-    text-align: center;
-}
-
-.games-examples {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.box {
-    border: 1px solid black;
-    padding: 6.7%;
-    border-radius: 10px;
 }
 
 .footer {
@@ -73,23 +52,12 @@ li{
     height: 5vh;
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer a {
-    text-decoration: none;
-    color: black;   
-}
-
-.game-text {
-    text-align: center;
-}
-
-.myhistory-game h1, h2{
-    margin-top: 0.7%;
-    margin-bottom: 0.7%;
-}
-
-.myhistory-game a {
     text-decoration: none;
     color: black;   
 }

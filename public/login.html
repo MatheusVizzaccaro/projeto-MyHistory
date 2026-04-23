@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyHistory</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
 </head>
 <body>
     <div class="header">
@@ -24,10 +26,19 @@
                 </li>
             </div>
     </div>
-    <div class="content">
-
+    <div class="content center-box">
+        <div class="account-box">
+            <p>Email</p>
+            <input type="text" class="input-box" id="ipt_email" placeholder="exemplo@companhia.com">
+            <p>Senha</p>
+            <input type="password" class="input-box" id="ipt_password" placeholder="***********">
+            <button class="sign-up-button" onclick="cadastrar()">Entrar</button>
+        </div>
+        <p class="text-redirect">Não tem uma conta ainda? <a href="cadastro.html">Criar sua conta</a></p>
+    </div>
     </div>
     <div class="footer">
+        <p>Desenvolvido por: <a href="https://github.com/MatheusVizzaccaro">Matheus Vizzaccaro Gonçalves</a></p>
     </div>
 </body>
 </html>

@@ -1,0 +1,38 @@
+.initial-text h1, .initial-text p{
+    margin-top: 0.7%;
+    margin-bottom: 0.7%;
+}
+
+.initial-text {
+    font-size: larger;
+}
+
+.initial-content {
+    text-align: center;
+}
+
+.games-examples {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 6.7%;
+    border-radius: 10px;
+}
+
+.game-text {
+    text-align: center;
+}
+
+.myhistory-game h1, h2{
+    margin-top: 0.7%;
+    margin-bottom: 0.7%;
+}
+
+.myhistory-game a {
+    text-decoration: none;
+    color: black;   
+}
