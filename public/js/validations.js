@@ -1,3 +1,11 @@
+function isUsername(string) {
+    if(string.length > 30) {
+        return [false, `O username é muito longo (máximo: 30 caracteres)`]
+    } else {
+        return [true, `Username válido`]
+    }
+}
+
 function isEmail(string) {
     let indexAt = string.indexOf("@");
     let indexDot = string.lastIndexOf(".");
@@ -23,21 +31,18 @@ function isPassword(string) {
 
     if (!symbols.test(string)) {
         phases.push(false);
-        // return [false, "A senha não possui símbolos."];
     } else {
         phases.push(true);
     }
     
     if (!numbers.test(string)) {
         phases.push(false);
-        // return [false, "A senha não possui números."];
     } else {
         phases.push(true);
     }
     
     if (!capital.test(string)) {
         phases.push(false);
-        // return [false, "A senha não possui letras maiúsculas."];
     } else {
         phases.push(true);
     }
@@ -49,6 +54,27 @@ function isPassword(string) {
     }
     return [true, phases];
 }
+
+function validateSignUp() {
+    let email = ipt_email.value;
+    let senha = ipt_password.value;
+    let username = ipt_username.value;
+
+    if(!isUsername(username)[0]) {
+        return false;
+    }
+
+    if(!isEmail(email)[0]) {
+        return false;
+    }
+
+    if(!isPassword(senha)[0]) {
+        return false;
+    }
+
+    return true;
+}
+
 
 
 
