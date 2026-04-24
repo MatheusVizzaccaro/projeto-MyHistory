@@ -18,9 +18,9 @@
                 <li class="navbar">
                     <a href="index.html">Inicial</a>
                     <a>|</a>
-                    <a href="#">Login</a>
+                    <a href="login.html">Login</a>
                     <a>|</a>
-                    <a href="signup.html">Cadastro</a>
+                    <a href="#">Cadastro</a>
                     <a>|</a>
                     <a href="dashboard.html">Dashboard</a>
                 </li>
@@ -28,17 +28,26 @@
     </div>
     <div class="content center-box">
         <div class="account-box">
+            <p>Nome de usuário</p>
+            <input type="text" class="input-box" id="ipt_username" placeholder="exemplo.exemplar" onblur="updateScreenUsername()">
+            <div id="username_val_msg"></div>
             <p>Email</p>
-            <input type="text" class="input-box" id="ipt_email" placeholder="exemplo@companhia.com">
+            <input type="text" class="input-box" id="ipt_email" placeholder="exemplo@companhia.com" onblur="updateScreenEmail()">
+            <div id="email_val_msg"></div>
             <p>Senha</p>
-            <input type="password" class="input-box" id="ipt_password" placeholder="***********">
-            <button class="sign-up-button" onclick="cadastrar()">Entrar</button>
+            <input type="password" class="input-box" id="ipt_password" placeholder="***********" onkeyup="updateScreenPassword()">
+            <div class="password-val-msg" id="password_val_msg">
+                <div id="password_list" class="password-list"></div>
+            </div>
+            <button class="sign-up-button" onclick="insertUser()">Cadastrar</button>
+            <div id="sign_up_msg" class="sign-up-msg">
         </div>
-        <p class="text-redirect">Não tem uma conta ainda? <a href="signup.html">Criar sua conta</a></p>
-    </div>
+        <p class="text-redirect">Já tem uma conta? <a href="login.html">Entrar</a></p>
     </div>
     <div class="footer">
         <p>Desenvolvido por: <a href="https://github.com/MatheusVizzaccaro">Matheus Vizzaccaro Gonçalves</a></p>
     </div>
 </body>
 </html>
+<script src="js/validations.js"></script>
+<script src="js/cadastro.js"></script>  

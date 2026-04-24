@@ -1,0 +1,83 @@
+.account-box {
+    text-align: center;
+    display: flex;
+    width: 320px;
+    border: 1px solid black;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    margin-bottom: 0.7%;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+
+.account-box p, .account-box input {
+    gap: 5px;
+}
+
+.input-box {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.sign-up-button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f5f5f7;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* cursor: pointer; */
+}
+
+.input-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.text-redirect {
+    text-align: center;
+}
+
+.success {
+    width: fit-content;
+    padding: 0.3%;
+    background-color: #ccff99;
+    color: #009900;
+    opacity: 0.6;
+    border-radius: 3px;
+}
+
+.fail {
+    width: fit-content;
+    padding: 0.3%;
+    background-color: #eb8a83;
+    color: red;
+    opacity: 0.6;
+    border-radius: 3px;
+}
+
+.password-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.password-list li {
+    width: 80%;
+}
+
+.sign-up-msg {
+    color: red;
+}
