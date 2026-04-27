@@ -55,10 +55,20 @@ function isPassword(string) {
     return [true, phases];
 }
 
+function passwordsMatch(string1, string2) {
+    if(string1 == string2) {
+        return [true, "As senhas coincidem."];
+    } else {
+        return [false, "As senhas não coincidem."]
+    }
+}
+
 function validateSignUp() {
-    let email = ipt_email.value;
-    let senha = ipt_password.value;
     let username = ipt_username.value;
+    let email = ipt_email.value;
+    let password = ipt_password.value;
+    let passwordConfirm = ipt_password_confirm.value;
+
 
     if(!isUsername(username)[0]) {
         return false;
@@ -68,7 +78,11 @@ function validateSignUp() {
         return false;
     }
 
-    if(!isPassword(senha)[0]) {
+    if(!isPassword(password)[0]) {
+        return false;
+    }
+
+    if(!passwordsMatch(password, passwordConfirm)) {
         return false;
     }
 

@@ -42,11 +42,44 @@ function updateScreenPassword() {
     }
 }
 
-function insertUser() {
-    if(validateSignUp()) {
-        //Cenário em que tudo está correto para prosseguir
-        alert("teste");
+function updateScreenPasswordConfirm() {
+    let password = ipt_password.value;
+    let passwordConfirm = ipt_password_confirm.value;
+    
+    if(passwordsMatch(password, passwordConfirm)[0]) {
+        password_confirm_list.innerHTML = `<div class="success" id="list_capital">As senhas coincidem.</div>`;
     } else {
+        password_confirm_list.innerHTML = `<div class="fail" id="list_capital">As senhas não coincidem.</div>`;
+    }
+}
+
+async function insertUser() {
+    if(!validateSignUp()) {
         sign_up_msg.innerHTML = "Preencha corretamente as informações de cadastro.";
+        return;
+    } else {
+        var username = ipt_username.value;
+        var email = ipt_email.value;
+        var password = ipt_password.value;
+
+        try {
+            const answer = await fetch("http://localhost:3333/usuarios/cadastrar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    usernameServer: username,
+                    emailServer: email,
+                    passwordServer: password
+                })
+            });
+
+            if(answer.ok) {
+                alert("redirecionando...")
+            } else {
+                alert("erro n sei noq")
+            }
+        } catch (err) {
+            console.log(err);
+        }
     }
 }
