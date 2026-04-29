@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 h1, h2, h3 {
   font-family: 'Inter', serif;
 }
@@ -42,12 +48,11 @@ body, p, li, a {
 }
 
 .content {
+    flex: 1;
     margin-top: 0.7%;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
     background-color: #1793d1;
     height: 5vh;
     width: 100%;
@@ -55,6 +60,7 @@ body, p, li, a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: auto;
 }
 
 .footer a {

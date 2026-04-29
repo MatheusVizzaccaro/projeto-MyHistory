@@ -39,6 +39,11 @@
             <div class="password-val-msg" id="password_val_msg">
                 <div id="password_list" class="password-list"></div>
             </div>
+            <p>Confirmação de senha</p>
+            <input type="password" class="input-box" id="ipt_password_confirm" placeholder="***********" onblur="updateScreenPasswordConfirm()">
+            <div class="password-val-msg" id="password_confirm_val_msg">
+                <div id="password_confirm_list" class="password-list"></div>
+            </div>
             <button class="sign-up-button" onclick="insertUser()">Cadastrar</button>
             <div id="sign_up_msg" class="sign-up-msg">
         </div>
@@ -50,4 +55,4 @@
 </body>
 </html>
 <script src="js/validations.js"></script>
-<script src="js/cadastro.js"></script>  
+<script src="js/signup.js"></script>  

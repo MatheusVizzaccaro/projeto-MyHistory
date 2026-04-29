@@ -1,4 +1,12 @@
 **<h1>Projeto individual - Matheus Vizzaccaro Gonçalves</h1>**
+**<h2>Tecnologias utilizadas no projeto</h2>**
+<ul>
+  <li>Front-End: HTML, CSS, JavaScript</li>
+  <li>Back-End: NodeJS, API Web-Data-Viz</li>
+  <li>Dados: MySQL</li>
+</ul>
+
+A API web-data-viz foi adaptada, e consequentemente, alterada, ao propósito desse projeto. Portanto, é necessário mencionar que o Back-End é apenas uma alteração do código disponibilizado da Web-Data-Viz. (fonte: https://github.com/BandTec/web-data-viz)
 
 **<h2>Tema: Videogames</h2>**
 
