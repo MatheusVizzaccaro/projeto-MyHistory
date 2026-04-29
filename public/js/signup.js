@@ -25,20 +25,18 @@ function updateScreenPassword() {
     password_list.innerHTML = "";
     if(phases[0] == false) {
         password_list.innerHTML += `<div class="fail" id="list_symbol">A senha não tem símbolos.</div>`;
-    } else {
-        password_list.innerHTML += `<div class="success" id="list_symbol">A senha tem símbolos.</div>`;
     }
         
     if(phases[1] == false) {
         password_list.innerHTML += `<div class="fail" id="list_number">A senha não tem números.</div>`;
-    } else {
-        password_list.innerHTML += `<div class="success" id="list_number">A senha tem números.</div>`;
     }
     
     if(phases[2] == false) {
         password_list.innerHTML += `<div class="fail" id="list_capital">A senha tem letras maiúsculas.</div>`;
-    } else {
-        password_list.innerHTML += `<div class="success" id="list_capital">A senha tem letras maiúsculas.</div>`;
+    }
+
+    if(phases[3] == false) {
+        password_list.innerHTML += `<div class="fail" id="list_capital">A senha deve conter entre 8 a 30 caracteres.</div>`;
     }
 }
 
@@ -47,9 +45,9 @@ function updateScreenPasswordConfirm() {
     let passwordConfirm = ipt_password_confirm.value;
     
     if(passwordsMatch(password, passwordConfirm)[0]) {
-        password_confirm_list.innerHTML = `<div class="success" id="list_capital">As senhas coincidem.</div>`;
+        password_confirm_list.innerHTML = `<div class="success" id="list_capital">${passwordsMatch(password, passwordConfirm)[1]}</div>`;
     } else {
-        password_confirm_list.innerHTML = `<div class="fail" id="list_capital">As senhas não coincidem.</div>`;
+        password_confirm_list.innerHTML = `<div class="fail" id="list_capital">${passwordsMatch(password, passwordConfirm)[1]}</div>`;
     }
 }
 
@@ -73,10 +71,18 @@ async function insertUser() {
                 })
             });
 
+            let msg = await answer.text();
+
             if(answer.ok) {
                 alert("redirecionando...")
+            } else if (answer.status === 409) {
+                if(msg.includes("username")) {
+                    username_val_msg.innerHTML = `<span class="fail">Já existe uma conta cadastrada com este username</span>`
+                } else if(msg.includes("email")) {
+                    email_val_msg.innerHTML = `<span class="fail">Já existe uma conta cadastrada com este email</span>`
+                }   
             } else {
-                alert("erro n sei noq")
+                alert("erro n sei noq");
             }
         } catch (err) {
             console.log(err);

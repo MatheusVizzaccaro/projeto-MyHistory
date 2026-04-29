@@ -9,6 +9,13 @@ function autenticar(email, senha) {
     return database.executar(instrucaoSql);
 }
 
+function verifyUsername(username) {
+    var instrucaoSQL = `
+        SELECT username FROM users WHERE username LIKE '${username}';
+    `;
+    return database.executar(instrucaoSQL);
+}
+
 function verifyEmail(email) {
     var instrucaoSQL = `
         SELECT email FROM users WHERE email LIKE '${email}';
@@ -32,5 +39,6 @@ function cadastrar(username, email, senha) {
 module.exports = {
     autenticar,
     cadastrar,
-    verifyEmail
+    verifyEmail,
+    verifyUsername
 };

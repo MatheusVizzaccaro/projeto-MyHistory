@@ -48,7 +48,7 @@
 }
 
 .success {
-    width: fit-content;
+    width: 80%;
     padding: 0.3%;
     background-color: #ccff99;
     color: #009900;
@@ -57,7 +57,7 @@
 }
 
 .fail {
-    width: fit-content;
+    width: 80%;
     padding: 0.3%;
     background-color: #eb8a83;
     color: red;
@@ -72,6 +72,7 @@
     flex-direction: column;
     padding: 0;
     margin: 0;
+    gap: 5px;
 }
 
 .password-list li {
