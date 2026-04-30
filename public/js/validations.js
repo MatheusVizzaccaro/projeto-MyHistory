@@ -115,7 +115,3 @@ function validateSignUp() {
     
     return true;
 }
-
-
-
-

@@ -82,7 +82,7 @@ async function insertUser() {
                     email_val_msg.innerHTML = `<span class="fail">Já existe uma conta cadastrada com este email</span>`
                 }   
             } else {
-                alert("erro n sei noq");
+                alert("Erro Desconhecido.");
             }
         } catch (err) {
             console.log(err);
