@@ -6,6 +6,8 @@ de facilitar o acesso e manter o padrão de cores do projeto. -->
 <h2>Cores principais:</h2>
 Azul Logo: #1a74ea<br>
 Azul 01: #1793d1<br>
+Azul Escuro 01: #0f3d6e<br>
+Azul Escuro bordas: #0a2d50<br>
 Branco 00: #ffffff<br>
 Branco 02: #f5f5f7
 

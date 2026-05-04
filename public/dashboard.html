@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyHistory</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
 </head>
 <body>
@@ -25,11 +26,33 @@
                 </li>
             </div>
     </div>
-    <div class="content">
-
-    </div>
+    <div class="layout">
+        <div class="container">
+            <div class="banner">
+                <p> -Nome do usuário- </p>
+            </div>
+            <div class="dashboard">
+                <div class="divKPI">
+                    <p>Você errou X questões do minijogo.</p>
+                </div>
+                <div class="divKPI">
+                    <p>Visão de acertos ou erros das questões: <span class="ideal">1</span> | <span class="problema">2</span> | <span
+                            class="ideal">3</span> | <span class="ideal">4</span> | <span class="ideal">5</span>
+                    </p>
+                </div>
+                <div class="divGrafico">
+                    <canvas id="grafico1" class="grafico2"></canvas>
+                </div>
+                <div class="divGrafico">
+                    <canvas id="grafico2" class="grafico2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>  
     <div class="footer">
         <p>Desenvolvido por: <a href="https://github.com/MatheusVizzaccaro">Matheus Vizzaccaro Gonçalves</a></p>
     </div>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/charts.js"></script>
