@@ -1,18 +1,27 @@
+function verifySession() {
+    var username = sessionStorage.NOME_USUARIO;
+    var email = sessionStorage.NOME_EMAIL;
+
+    if(username == undefined) {
+        window.location = "../auth/login.html"
+    }
+}
+
 function stringLength(string, fieldName, min, max) {
-    if(string.length > max) {
-        return [false, `O ${fieldName} é muito longo. (máximo: ${max}) caracteres)`];
+    if (string.length > max) {
+        return { "status": false, "message": `O ${fieldName} é muito longo. (máximo: ${max}) caracteres)` };
     } else if (string.length < min) {
-        return [false, `O ${fieldName} é muito curto. (mínimo: ${min}) caracteres)`];
+        return { "status": false, "message": `O ${fieldName} é muito curto. (mínimo: ${min}) caracteres)` };
     } else {
-        return [true, `${fieldName} é válido`];
+        return {"status": true, "message": `${fieldName} é válido`};
     }
 }   
 
 function isUsername(string) {
     if(stringLength(string, "username", 4, 30)[0]) {
-        return [true, stringLength(string, "Username", 4, 30)[1]];
+        return {"status": true, "message": stringLength(string, "Username", 4, 30)[1]};
     } else {
-        return [false, stringLength(string, "Username", 4, 30)[1]]
+        return {"status": false, "message": stringLength(string, "Username", 4, 30)[1]}
     }
 }
 
@@ -25,18 +34,18 @@ function isEmail(string) {
 
     if(stringLength(string, null, 7, 30)[0]) {
         if (indexAt == -1) {
-            return [false, `O Email não tem "@".`];
+            return {"status": false, "message": `O Email não tem "@".`};
         } else if (indexAt !== lastIndexAt) {
-            return [false, `o Email não pode ter mais que um "@".`];
+            return {"status": false, "message": `o Email não pode ter mais que um "@".`};
         } else if (indexAt > indexDot) {
-            return [false, `o Email não tem nenhum "." depois do "@".`];
+            return {"status": false, "message": `o Email não tem nenhum "." depois do "@".`};
         } else if (string.length == indexDot + 1) {
-            return [false, `o Email não tem nenhum domínio. (Ex: ".com")`];
+            return{"status": false, "message": `o Email não tem nenhum domínio. (Ex: ".com")`};
         } else {
-            return [true, stringLength(string, "Email", 7, 30)[1]]
+            return {"status": true, "message": stringLength(string, "Email", 7, 30).message}
         }
     } else {
-        return [false, stringLength(string, "Email", 7, 30)[1]]
+        return {"status": false, "message": stringLength(string, "Email", 7, 30).message}
     }
 }
 
@@ -73,20 +82,20 @@ function isPassword(string) {
 
     for(let i=0;i<phases.length;i++) {
         if(phases[i] === false) {
-            return [false, phases];
+            return {"status": false, "array": phases};
         } 
     }
 
-    return [true, phases];
+    return {"status": true, "array": phases};
 }
 
 function passwordsMatch(string1, string2) {
     if (string1.length == 0 && string2.length == 0) {
-        return [false, "As senhas não podem ser nulas."]
+        return {"status": false, "message":  "As senhas não podem ser nulas."};
     } else if (string1 == string2) {
-        return [true, "As senhas coincidem."];
+        return {"status": true, "message":  "As senhas coincidem."};
     } else {
-        return [false, "As senhas não coincidem."]
+        return {"status": false, "message":  "As senhas não coincidem."};
     }
 }
 

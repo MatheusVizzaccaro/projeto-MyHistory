@@ -1,26 +1,26 @@
 function updateScreenUsername() {
     let username = ipt_username.value;
 
-    if(isUsername(username)[0]) {
-        username_val_msg.innerHTML = `<span class="success">${isUsername(username)[1]}</span>`
+    if(isUsername(username).status) {
+        username_val_msg.innerHTML = `<span class="success">${isUsername(username).message}</span>`
     } else {
-        username_val_msg.innerHTML = `<span class="fail">${isUsername(username)[1]}</span>`
+        username_val_msg.innerHTML = `<span class="fail">${isUsername(username).message}</span>`
     }
 }
 
 function updateScreenEmail() {
     let email = ipt_email.value;
 
-    if(isEmail(email)[0]) {
-    email_val_msg.innerHTML = `<span class="success">${isEmail(email)[1]}</span>`
+    if(isEmail(email).status) {
+    email_val_msg.innerHTML = `<span class="success">${isEmail(email).message}</span>`
     } else {
-        email_val_msg.innerHTML = `<span class="fail">${isEmail(email)[1]}</span>`
+        email_val_msg.innerHTML = `<span class="fail">${isEmail(email).message}</span>`
     }
 }
 
 function updateScreenPassword() {
     let senha = ipt_password.value;
-    let phases = isPassword(senha)[1];
+    let phases = isPassword(senha).array;
 
     password_list.innerHTML = "";
     if(phases[0] == false) {
@@ -44,7 +44,7 @@ function updateScreenPasswordConfirm() {
     let password = ipt_password.value;
     let passwordConfirm = ipt_password_confirm.value;
     
-    if(passwordsMatch(password, passwordConfirm)[0]) {
+    if(passwordsMatch(password, passwordConfirm).status) {
         password_confirm_list.innerHTML = `<div class="success" id="list_capital">${passwordsMatch(password, passwordConfirm)[1]}</div>`;
     } else {
         password_confirm_list.innerHTML = `<div class="fail" id="list_capital">${passwordsMatch(password, passwordConfirm)[1]}</div>`;

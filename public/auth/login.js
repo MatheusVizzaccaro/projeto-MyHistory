@@ -12,9 +12,11 @@ async function loginUser() {
             })
         });
 
-        let msg = await answer.text();
-
         if(answer.ok) {
+            let json = await answer.json()
+            console.log(json);
+            sessionStorage.NOME_USUARIO = json[0].username;
+            sessionStorage.EMAIL_USUARIO = json[0].email;
             alert("redirecionando...")
         } else if (answer.status === 403) {
             login_msg.innerHTML = "Credenciais inválidas.";

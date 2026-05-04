@@ -1,3 +1,5 @@
+div_username.innerHTML = `${sessionStorage.NOME_USUARIO}, este foi o resultado do questionário do jogo.`;
+
 const ctx = document.getElementById('grafico1');
 new Chart(ctx, {
     type: 'line',
@@ -52,7 +54,7 @@ new Chart(ctx2, {
             }
         },
         scales: {
-            y: {
+            y: {    
                 ticks: {
                     stepSize: 1,
                     callback: function(value) {
