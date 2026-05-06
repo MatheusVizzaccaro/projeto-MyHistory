@@ -6,7 +6,7 @@
   <li>Dados: MySQL</li>
 </ul>
 
-A API web-data-viz foi adaptada, e consequentemente, alterada, ao propósito desse projeto. Portanto, é necessário mencionar que o Back-End é apenas uma alteração do código disponibilizado da Web-Data-Viz. (fonte: https://github.com/BandTec/web-data-viz)
+A API web-data-viz foi adaptada, e consequentemente, alterada, ao propósito desse projeto. Portanto, é necessário mencionar que parte do Back-End é apenas uma alteração do código disponibilizado da Web-Data-Viz. (fonte: https://github.com/BandTec/web-data-viz)
 
 **<h2>Tema: Videogames</h2>**
 
