@@ -45,9 +45,9 @@ function updateScreenPasswordConfirm() {
     let passwordConfirm = ipt_password_confirm.value;
     
     if(passwordsMatch(password, passwordConfirm).status) {
-        password_confirm_list.innerHTML = `<div class="success" id="list_capital">${passwordsMatch(password, passwordConfirm)[1]}</div>`;
+        password_confirm_list.innerHTML = `<div class="success" id="list_capital">${passwordsMatch(password, passwordConfirm).message}</div>`;
     } else {
-        password_confirm_list.innerHTML = `<div class="fail" id="list_capital">${passwordsMatch(password, passwordConfirm)[1]}</div>`;
+        password_confirm_list.innerHTML = `<div class="fail" id="list_capital">${passwordsMatch(password, passwordConfirm).message}</div>`;
     }
 }
 

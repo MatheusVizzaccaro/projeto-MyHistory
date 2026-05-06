@@ -1,10 +1,16 @@
 function verifySession() {
-    var username = sessionStorage.NOME_USUARIO;
-    var email = sessionStorage.NOME_EMAIL;
+    var username = sessionStorage.USER_USERNAME;
+    var email = sessionStorage.USER_EMAIL;
 
-    if(username == undefined) {
-        window.location = "../auth/login.html"
+    console.log(username);
+    console.log(email);
+
+    if(username == undefined || email == undefined) {
+        alert("Realize o login antes de tentar acessar essa página.");
+        window.location = "../auth/login.html";
+        return false;
     }
+    return true;
 }
 
 function stringLength(string, fieldName, min, max) {
@@ -18,10 +24,10 @@ function stringLength(string, fieldName, min, max) {
 }   
 
 function isUsername(string) {
-    if(stringLength(string, "username", 4, 30)[0]) {
-        return {"status": true, "message": stringLength(string, "Username", 4, 30)[1]};
+    if(stringLength(string, "username", 4, 30).status) {
+        return {"status": true, "message": stringLength(string, "Username", 4, 30).message};
     } else {
-        return {"status": false, "message": stringLength(string, "Username", 4, 30)[1]}
+        return {"status": false, "message": stringLength(string, "Username", 4, 30).message}
     }
 }
 
@@ -32,7 +38,7 @@ function isEmail(string) {
 
 
 
-    if(stringLength(string, null, 7, 30)[0]) {
+    if(stringLength(string, null, 7, 30).status) {
         if (indexAt == -1) {
             return {"status": false, "message": `O Email não tem "@".`};
         } else if (indexAt !== lastIndexAt) {
@@ -74,7 +80,7 @@ function isPassword(string) {
         phases.push(true);
     }
 
-    if (stringLength(string, null, 8, 30)[0]) {
+    if (stringLength(string, null, 8, 30).status) {
         phases.push(true);
     } else {
         phases.push(false);
@@ -106,19 +112,19 @@ function validateSignUp() {
     let passwordConfirm = ipt_password_confirm.value;
 
 
-    if(!isUsername(username)[0]) {
+    if(!isUsername(username).status) {
         return false;
     }
 
-    if(!isEmail(email)[0]) {
+    if(!isEmail(email).status) {
         return false;
     }
 
-    if(!isPassword(password)[0]) {
+    if(!isPassword(password).status) {
         return false;
     }
 
-    if(!passwordsMatch(password, passwordConfirm)[0]) {
+    if(!passwordsMatch(password, passwordConfirm).status) {
         return false;
     }   
     

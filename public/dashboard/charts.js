@@ -1,4 +1,4 @@
-div_username.innerHTML = `${sessionStorage.NOME_USUARIO}, este foi o resultado do questionário do jogo.`;
+div_username.innerHTML = `${sessionStorage.USER_USERNAME}, este foi o resultado do questionário do jogo.`;
 
 const ctx = document.getElementById('grafico1');
 new Chart(ctx, {
