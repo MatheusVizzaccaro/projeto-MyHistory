@@ -3,7 +3,7 @@ var database = require("../database/config")
 function login(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucaoSql = `
-        SELECT username, email, password FROM users WHERE email = '${email}' AND password = '${senha}';
+        SELECT id, username, email, password FROM user WHERE email = '${email}' AND password = '${senha}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -11,14 +11,14 @@ function login(email, senha) {
 
 function verifyUsername(username) {
     var instrucaoSQL = `
-        SELECT username FROM users WHERE username LIKE '${username}';
+        SELECT username FROM user WHERE username LIKE '${username}';
     `;
     return database.executar(instrucaoSQL);
 }
 
 function verifyEmail(email) {
     var instrucaoSQL = `
-        SELECT email FROM users WHERE email LIKE '${email}';
+        SELECT email FROM user WHERE email LIKE '${email}';
     `;
     return database.executar(instrucaoSQL);
 }
@@ -30,7 +30,7 @@ function cadastrar(username, email, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO users (username, email, password) VALUES ('${username}', '${email}', '${senha}');
+        INSERT INTO user (username, email, password) VALUES ('${username}', '${email}', '${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

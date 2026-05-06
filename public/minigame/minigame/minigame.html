@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyHistory</title>
+    <script src="../../js/validations.js"></script>
+    <script>
+        verifySession();
+    </script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="minigame.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
 </head>
 <body>
@@ -26,11 +31,24 @@
             </div>
     </div>
     <div class="content">
-
+        <div class="minigame-choose-phase">
+            <div class="div-box">
+                <div class="box">
+                    <button>Fase 1</button>
+                </div>
+                <div class="box">
+                    <button>Fase 2</button>
+                </div>
+                <div class="box">
+                    <button>Fase 3</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <p>Desenvolvido por: <a href="https://github.com/MatheusVizzaccaro">Matheus Vizzaccaro Gonçalves</a></p>
     </div>
 </body>
 </html>
-<script src="../js/validations.js"></script>
+<script src="../../js/validations.js"></script>
+<script src="minigame.js"></script>

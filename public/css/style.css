@@ -21,7 +21,7 @@ body, p, li, a {
     display: flex;
     justify-content: space-between;
     padding: 0.7%;
-    background-color: #1793d1;
+    background-color: #1a74ea;
 }
 
 .logo-text {
@@ -48,11 +48,12 @@ body, p, li, a {
 }
 
 .content {
+    height: 641.4px;
     flex: 1;
 }
 
 .footer {
-    background-color: #1793d1;
+    background-color: #1a74ea;
     height: 5vh;
     width: 100%;
     text-align: center;
