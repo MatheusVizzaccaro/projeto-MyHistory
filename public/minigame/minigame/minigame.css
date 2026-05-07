@@ -5,15 +5,38 @@
     align-items: center;
 }
 
+.quiz-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
 .box {
     display: flex;
     width: 300px;
-    height: 300px;
+    height: 300px !important;
     border: 2px solid black;
     border-radius: 10px;
+    flex-direction: column !important; 
+    gap: 15px !important;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.quiz-box {
+    display: flex;
+    width: 300px;
+    min-height: 300px !important;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex-direction: column !important; 
+    gap: 15px !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
 }
 
 .div-box {
@@ -21,4 +44,16 @@
     justify-content: space-between;
     width: 100%;
     margin: 1%;
+}
+
+.question-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.question-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }

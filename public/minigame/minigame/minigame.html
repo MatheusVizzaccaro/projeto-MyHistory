@@ -6,9 +6,9 @@
     <title>MyHistory</title>
     <script src="../../js/validations.js"></script>
     <script>
-        verifySession();
+        // verifySession("../../auth/login.html");
     </script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="minigame.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
 </head>
@@ -20,13 +20,13 @@
             </div>
             <div class="div-navbar">
                 <li class="navbar">
-                    <a href="../index.html">Inicial</a>
+                    <a href="../../index.html">Inicial</a>
                     <a>|</a>
-                    <a href="../auth/login.html">Login</a>
+                    <a href="../../auth/login.html">Login</a>
                     <a>|</a>
-                    <a href="../auth/signup.html">Cadastro</a>
+                    <a href="../../auth/signup.html">Cadastro</a>
                     <a>|</a>
-                    <a href="../dashboard/dashboard.html">Dashboard</a>
+                    <a href="../../dashboard/dashboard.html">Dashboard</a>
                 </li>
             </div>
     </div>
@@ -44,6 +44,33 @@
                 </div>
             </div>
         </div>
+        <div class="quiz-card">
+            <form id="quiz_form">
+                <div class="quiz-box">
+                    <div id="quiz_phase" class="quiz-phase"></div>
+                    <div id="quiz_info" class="quiz-info"></div>
+                    <div id="question_nome" class="question-name"></div>
+                    <div id="question_options" class="question-options">
+                        <div class="question-row">
+                            <input type="radio" name="ipt_radio" id="option_1" value="1" onclick="checkAnswer()"><div id="div_option_1">Opção 1</div>
+                        </div>
+                        <div class="question-row">
+                            <input type="radio" name="ipt_radio" id="option_2" value="2" onclick="checkAnswer()"><div id="div_option_2">Opção 2</div>
+                        </div>
+                        <div class="question-row">
+                            <input type="radio" name="ipt_radio" id="option_3" value="3" onclick="checkAnswer()"><div id="div_option_3">Opção 3</div>
+                        </div>
+                        <div class="question-row">
+                            <input type="radio" name="ipt_radio" id="option_4" value="4" onclick="checkAnswer()"><div id="div_option_4">Opção 4</div>
+                        </div>
+                    </div>
+                    <div id="quiz_message"></div>
+                    <button onclick="nextQuestion()" type="button" id="advance_button">Avançar</button>
+                    <button onclick="pushAnswer()" type="button">Submeter resposta</button>
+                    <button onclick="previousQuestion()" type="button" id="previous_button">Voltar para questão anterior</button>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="footer">
         <p>Desenvolvido por: <a href="https://github.com/MatheusVizzaccaro">Matheus Vizzaccaro Gonçalves</a></p>
@@ -51,4 +78,5 @@
 </body>
 </html>
 <script src="../../js/validations.js"></script>
+<script src="questions.js"></script>
 <script src="minigame.js"></script>

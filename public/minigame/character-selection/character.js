@@ -16,7 +16,7 @@ async function saveChoice(choice) {
             });
             console.log(answer);
             if(answer.ok) {
-                return alert("ACHO QUE O INSERT FOI");
+                window.location = "../minigame/minigame.html";
             } else {
                 return alert("Erro Desconhecido.");
             }

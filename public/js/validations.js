@@ -1,4 +1,4 @@
-function verifySession() {
+function verifySession(path) {
     var username = sessionStorage.USER_USERNAME;
     var email = sessionStorage.USER_EMAIL;
 
@@ -7,7 +7,7 @@ function verifySession() {
 
     if(username == undefined || email == undefined) {
         alert("Realize o login antes de tentar acessar essa página.");
-        window.location = "../auth/login.html";
+        window.location = path;
         return false;
     }
     return true;

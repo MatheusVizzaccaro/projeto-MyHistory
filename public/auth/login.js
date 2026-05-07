@@ -18,7 +18,7 @@ async function loginUser() {
             sessionStorage.USER_USERNAME = json[0].username;
             sessionStorage.USER_EMAIL = json[0].email;
             sessionStorage.USER_ID = json[0].id;
-            window.location = "../minigame/minigame.html";
+            window.location = "../minigame/character-selection/character.html";
         } else if (answer.status === 403) {
             login_msg.innerHTML = "Credenciais inválidas.";
         } else {
