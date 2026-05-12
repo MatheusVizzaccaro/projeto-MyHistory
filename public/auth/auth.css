@@ -8,6 +8,18 @@
     border-radius: 10px;
     gap: 10px;
     margin-bottom: 0.7%;
+    background-color: #112036;
+    color: white;
+}
+
+.account-box input {
+    color: white;   
+    background-color: #1c1c1c;
+}
+
+.account-box button {
+    color: white;
+    background-color: #0f3d6e;
 }
 
 .center-box {
@@ -15,6 +27,8 @@
     justify-content: center;
     align-items: center ;
     flex-direction: column;
+    width: 100%; 
+    height: 100%;
 }
 
 .account-box p, .account-box input {

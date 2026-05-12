@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,64 +13,68 @@
     <link rel="stylesheet" href="minigame.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
 </head>
+
 <body>
-    <div class="header">
-            <div class="logo-text">
-                <h1>MyHistory</h1>
-                <img src="" alt="">
-            </div>
-            <div class="div-navbar">
-                <li class="navbar">
-                    <a href="../../index.html">Inicial</a>
-                    <a>|</a>
-                    <a href="../../auth/login.html">Login</a>
-                    <a>|</a>
-                    <a href="../../auth/signup.html">Cadastro</a>
-                    <a>|</a>
-                    <a href="../../dashboard/dashboard.html">Dashboard</a>
-                </li>
-            </div>
-    </div>
-    <div class="content">
-        <div class="minigame-choose-phase">
-            <div class="div-box">
-                <div class="box">
-                    <button>Fase 1</button>
+    <div class="background-image">
+        <div class="content">
+            <div class="initial-content glass-efect">
+                <div class="header">
+                    <div class="logo-text">
+                        <h1>MyHistory</h1>
+                        <img src="" alt="">
+                    </div>
+                    <div class="div-navbar">
+                        <li class="navbar">
+                            <a href="../../index.html">Inicial</a>
+                            <a href="../../auth/login.html">Login</a>
+                            <a href="../../auth/signup.html">Cadastro</a>
+                            <a href="../../index.html#game-section" class="minigame-button"><img src="../../assets/icon/play_arrow.png">Jogar</a>
+                        </li>
+                    </div>
                 </div>
-                <div class="box">
-                    <button>Fase 2</button>
-                </div>
-                <div class="box">
-                    <button>Fase 3</button>
-                </div>
-            </div>
-        </div>
-        <div class="quiz-card">
-            <form id="quiz_form">
-                <div class="quiz-box">
-                    <div id="quiz_phase" class="quiz-phase"></div>
-                    <div id="quiz_info" class="quiz-info"></div>
-                    <div id="question_nome" class="question-name"></div>
-                    <div id="question_options" class="question-options">
-                        <div class="question-row">
-                            <input type="radio" name="ipt_radio" id="option_1" value="1" onclick="checkAnswer()"><div id="div_option_1"></div>
-                        </div>
-                        <div class="question-row">
-                            <input type="radio" name="ipt_radio" id="option_2" value="2" onclick="checkAnswer()"><div id="div_option_2"></div>
-                        </div>
-                        <div class="question-row">
-                            <input type="radio" name="ipt_radio" id="option_3" value="3" onclick="checkAnswer()"><div id="div_option_3"></div>
-                        </div>
-                        <div class="question-row">
-                            <input type="radio" name="ipt_radio" id="option_4" value="4" onclick="checkAnswer()"><div id="div_option_4"></div>
+                <div class="page-content">
+                    <div class="minigame-choose-phase">
+                        <div class="div-box">
+                            <div class="box">
+                                <button>Fase 1</button>
+                            </div>
+                            <div class="box">
+                                <button>Fase 2</button>
+                            </div>
+                            <div class="box">
+                                <button>Fase 3</button>
+                            </div>
                         </div>
                     </div>
-                    <div id="quiz_message"></div>
-                    <button onclick="nextQuestion()" type="button" id="advance_button">Avançar</button>
-                    <button onclick="pushAnswer()" type="button">Submeter resposta</button>
-                    <button onclick="previousQuestion()" type="button" id="previous_button">Voltar para questão anterior</button>
+                    <div class="quiz-card">
+                        <form id="quiz_form">
+                            <div class="quiz-box">
+                                <div id="quiz_phase" class="quiz-phase"></div>
+                                <div id="quiz_info" class="quiz-info"></div>
+                                <div id="question_nome" class="question-name"></div>
+                                <div id="question_options" class="question-options">
+                                    <div class="question-row">
+                                        <input type="radio" name="ipt_radio" id="option_1" value="1" onclick="checkAnswer()"><div id="div_option_1"></div>
+                                    </div>
+                                    <div class="question-row">
+                                        <input type="radio" name="ipt_radio" id="option_2" value="2" onclick="checkAnswer()"><div id="div_option_2"></div>
+                                    </div>
+                                    <div class="question-row">
+                                        <input type="radio" name="ipt_radio" id="option_3" value="3" onclick="checkAnswer()"><div id="div_option_3"></div>
+                                    </div>
+                                    <div class="question-row">
+                                        <input type="radio" name="ipt_radio" id="option_4" value="4" onclick="checkAnswer()"><div id="div_option_4"></div>
+                                    </div>
+                                </div>
+                                <div id="quiz_message"></div>
+                                <button onclick="nextQuestion()" type="button" id="advance_button">Avançar</button>
+                                <button onclick="pushAnswer()" type="button">Submeter resposta</button>
+                                <button onclick="previousQuestion()" type="button" id="previous_button">Voltar para questão anterior</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <div class="footer">
@@ -80,3 +85,4 @@
 <script src="../../js/validations.js"></script>
 <script src="questions.js"></script>
 <script src="minigame.js"></script>
+

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +11,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1, h2, h3 {
@@ -17,11 +23,16 @@ body, p, li, a {
   font-family: 'Inter', sans-serif;
 }
 
-.header {
+.header {  
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 0.7%;
-    background-color: #1a74ea;
+    margin-top: 1%;
+    background-color: #112036;
+    border-radius: 10px;
+    border: 1px, solid, #1b3358b1;
+    color: white;
 }
 
 .logo-text {
@@ -33,11 +44,38 @@ body, p, li, a {
 .div-navbar {
     display: flex;
     align-items: center;
+    flex-direction: row;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navbar-selected {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.selected-line {
+    background-color: #1a74ea;
+    height: 1.5px;
+    width: 75%;
+    border-radius: 10px;
 }
 
 .navbar a {
     text-decoration: none;
-    color: black;   
+    color: white;   
     justify-content: space-around;
     padding-left: 10px;
     padding-right: 10px;
@@ -48,12 +86,65 @@ body, p, li, a {
 }
 
 .content {
-    height: 641.4px;
+    height: 100%;
+    width: 100%;
     flex: 1;
 }
 
-.footer {
+.background-image {
+    background-image: url(../assets/img/background-image.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    display: flex;
+}   
+
+.initial-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+}
+
+.glass-efect {
+    background-color: rgba(15, 37, 60, 0.7);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    padding-top: 2.0%;
+    padding-bottom: 2.0%;
+    color: white;
+}
+
+.minigame-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+    width: fit-content;
     background-color: #1a74ea;
+    border: 1px, solid, #1a74eab1;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #112036;
     height: 5vh;
     width: 100%;
     text-align: center;
@@ -61,9 +152,10 @@ body, p, li, a {
     align-items: center;
     justify-content: center;
     margin-top: auto;
+    color: white;   
 }
 
 .footer a {
     text-decoration: none;
-    color: black;   
+    color: white;   
 }
