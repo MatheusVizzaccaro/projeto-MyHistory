@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,49 +13,53 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
 </head>
+
 <body>
-    <div class="header">
-            <div class="logo-text">
-                <h1>MyHistory</h1>
-                <img src="" alt="">
-            </div>
-            <div class="div-navbar">
-                <li class="navbar">
-                    <a href="../index.html">Inicial</a>
-                    <a>|</a>
-                    <a href="../auth/login.html">Login</a>
-                    <a>|</a>
-                    <a href="../auth/signup.html">Cadastro</a>
-                    <a>|</a>
-                    <a href="#"><b>Dashboard</b></a>
-                </li>
-            </div>
-    </div>
-    <div class="layout">
-        <div class="container">
-            <div class="divUser-header">
-                <div class="divUser">
-                    <p id="div_username"> -Nome do usuário- </p>
+    <div class="background-image">
+        <div class="content">
+            <div class="initial-content glass-efect">
+                <div class="header">
+                    <div class="logo-text">
+                        <h1>MyHistory</h1>
+                        <img src="" alt="">
+                    </div>
+                    <div class="div-navbar">
+                        <li class="navbar">
+                            <a href="../index.html">Inicial</a>
+                            <a href="../auth/login.html">Login</a>
+                            <a href="../auth/signup.html">Cadastro</a>
+                            <a href="../index.html#game-section" class="minigame-button"><img src="../../assets/icon/play_arrow.png">Jogar</a>
+                        </li>
+                    </div>
                 </div>
-            </div>
-            <div class="dashboard">
-                <div class="divKPI">
-                    <p>Você errou X questões do minijogo.</p>
-                </div>
-                <div class="divKPI">
-                    <p>Visão de acertos ou erros das questões: <span class="ideal">1</span> | <span class="problema">2</span> | <span
-                            class="ideal">3</span> | <span class="ideal">4</span> | <span class="ideal">5</span>
-                    </p>
-                </div>
-                <div class="divGrafico">
-                    <canvas id="grafico1" class="grafico2"></canvas>
-                </div>
-                <div class="divGrafico">
-                    <canvas id="grafico2" class="grafico2"></canvas>
+                <div class="page-content">
+                    <div class="container">
+                        <div class="divUser-header">
+                            <div class="divUser">
+                                <p id="div_username"> -Nome do usuário- </p>
+                            </div>
+                        </div>
+                        <div class="dashboard">
+                            <div class="divKPI">
+                                <p>Você errou X questões do minijogo.</p>
+                            </div>
+                            <div class="divKPI">
+                                <p>Visão de acertos ou erros das questões: <span class="ideal">1</span> | <span class="problema">2</span> | <span
+                                        class="ideal">3</span> | <span class="ideal">4</span> | <span class="ideal">5</span>
+                                </p>
+                            </div>
+                            <div class="divGrafico">
+                                <canvas id="grafico1" class="grafico2"></canvas>
+                            </div>
+                            <div class="divGrafico">
+                                <canvas id="grafico2" class="grafico2"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
     <div class="footer">
         <p>Desenvolvido por: <a href="https://github.com/MatheusVizzaccaro">Matheus Vizzaccaro Gonçalves</a></p>
     </div>

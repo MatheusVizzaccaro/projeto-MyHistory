@@ -8,7 +8,7 @@ new Chart(ctx, {
         datasets: [{
             label: 'Demonstra quanto tempo foi dedicado por questão',
             data: [7, 8, 5, 10, 6],
-            borderColor: '#0f3d6e',
+            borderColor: 'white',
             borderWidth: 2,
             pointRadius: 4,
             tension: 0.3
