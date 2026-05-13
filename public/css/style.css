@@ -23,6 +23,10 @@ body, p, li, a {
   font-family: 'Inter', sans-serif;
 }
 
+button:enabled {
+    cursor: pointer;
+}
+
 .header {  
     width: 90%;
     display: flex;
@@ -31,7 +35,7 @@ body, p, li, a {
     margin-top: 1%;
     background-color: #112036;
     border-radius: 10px;
-    border: 1px, solid, #1b3358b1;
+    border: 1px solid #1b3358b1;
     color: white;
 }
 
@@ -136,7 +140,7 @@ body, p, li, a {
     height: 20px;
     width: fit-content;
     background-color: #1a74ea;
-    border: 1px, solid, #1a74eab1;
+    border: 1px solid #1b75eab1;
     text-decoration: none;
     color: white;
     padding: 10px;

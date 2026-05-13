@@ -74,7 +74,7 @@ async function insertUser() {
             let msg = await answer.text();
 
             if(answer.ok) {
-                alert("redirecionando...")
+                window.location = "login.html"
             } else if (answer.status === 409) {
                 if(msg.includes("username")) {
                     username_val_msg.innerHTML = `<span class="fail">Já existe uma conta cadastrada com este username</span>`
